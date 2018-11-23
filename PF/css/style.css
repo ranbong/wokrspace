@@ -28,7 +28,7 @@ table{border-collapse:collapse; border-spacing:0;}
 
 * {box-sizing:border-box;}
 html, body {width:100%;height:100%;background:#000;font-family:'Press Start 2P'}
-#wrap {position:relative;height:100%;padding:50px;overflow:hidden;}
+#wrap {position:relative;height:100%;padding:10px;overflow-x:hidden;}
 #top {margin-bottom:50px;}
 #top .topLeft img {width:35px;}
 #top .topRight span {display:inline-block;vertical-align:middle;}
@@ -48,11 +48,15 @@ html, body {width:100%;height:100%;background:#000;font-family:'Press Start 2P'}
 
 #container .click {display:block;position:absolute;top:50px;left:75px;background:url(../images/click-ico.png) no-repeat;width:50px;height:50px;background-size:50px 50px;animation:click 0.75s 3;opacity:0;}
 
-#container .content {position:absolute;top:0;left:150px;}
-#container .contentBox {display:none;width:1000px;border:2px solid #000;background:#d3d3d3;padding:6px;box-shadow:2px 2px 0px black, inset 2px 2px 0px #fff}
-#container .contentBox .contentTop {position:relative;line-height:40px;text-align:center;text-transform:uppercase;}
-#container .contentBox .close {position:absolute;top:0;right:0;display:block;height:35px;line-height:35px;border-bottom:3px inset rgba(0,0,0,0.5);border-left:3px inset rgba(0,0,0,0.5);border-right:3px inset rgba(255,255,255,0.5);border-top:3px inset rgba(255,255,255,0.5);padding:0 8px;background:#e24c4b;}
-#container .contentBox .contentView {background:#fff;border:2px solid #000;padding:20px;box-shadow:2px 2px 0px #fff}
+
+#container .content {/* position:absolute;top:0;left:150px; */display:-webkit-flex;display:flex;flex-flow:row wrap/* flex-wrap:wrap;align-items:stretch; */}
+#container .contentBox {/* -webkit-flex:1;-ms-flex:1;flex:1; */width:33.33%;border:2px solid #000;background:#d3d3d3;padding:6px;box-shadow:2px 2px 0px black, inset 2px 2px 0px #fff}
+
+
+
+#container .contentBox .contentTop {position:relative;line-height:40px;text-align:center;text-transform:uppercase;font-size:14px;}
+#container .contentBox .close {position:absolute;top:0;right:0;display:block;height:35px;line-height:35px;border-bottom:3px inset rgba(0,0,0,0.5);border-left:3px inset rgba(0,0,0,0.5);border-right:3px inset rgba(255,255,255,0.5);border-top:3px inset rgba(255,255,255,0.5);padding:0 8px;background:#e24c4b;font-size:12px;display:none;}
+#container .contentBox .contentView {height:475px;background:#fff;border:2px solid #000;padding:20px;box-shadow:2px 2px 0px #fff;overflow-x:hidden;overflow-y:auto;word-break:break-word;}
 
 
 
