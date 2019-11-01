@@ -40,20 +40,20 @@ html, body {width:100%;height:100%;background:#643a7a;font-family:'Gamja Flower'
 .frame-box {perspective:1000px;padding:16px;width:80%;height:78%;max-width:960px;box-shadow:10px 10px 0 1px #643a7a;background:linear-gradient(178deg, #ef2f96, #ad2fed, #ad2fed, #d53070);background-size:600% 600%;-webkit-animation:background 7s ease infinite;animation:background 7s ease infinite;}
 
 .frame-box .frame-inner {position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;transition:all 0.7s ease-in-out;}
-.frame-box:hover .frame-inner, .frame-box:active .frame-inner {transform:rotateY(180deg);}
+.frame-box:hover .frame-inner, .frame-box.touch .frame-inner {transform:rotateY(180deg);}
 .portfolio-front, .portfolio-back {position:absolute;width:100%;height:100%;backface-visibility:hidden;}
 .portfolio-front {background:#201c29;transition:opacity 1s ease-in-out;}
 .portfolio-front .title-k {position:absolute;top:105px;left:-5px;background:url(../images/title.png) no-repeat;width:100%;height:100%;background-size:99% 80%;}
 .portfolio-back {width:100%;height:100%;padding:0 30px 20px 30px;background:#000;color:#fff;transform:rotateY(180deg);overflow-y:auto;opacity:0;transition:opacity 1s ease-in-out;}
-.frame-box:hover .portfolio-front, .frame-box:active .portfolio-front {backface-visibility:hidden;opacity:0;}
-.frame-box:hover .portfolio-back, .frame-box:active .portfolio-back  {backface-visibility:visible;opacity:1;}
+.frame-box:hover .portfolio-front, .frame-box.touch .portfolio-front {backface-visibility:hidden;opacity:0;}
+.frame-box:hover .portfolio-back, .frame-box.touch .portfolio-back {backface-visibility:visible;opacity:1;}
 
 .frame .portfolio-back::-webkit-scrollbar {width:6px;}
 .frame .portfolio-back::-webkit-scrollbar,
 .frame .portfolio-back::-webkit-scrollbar-thumb {overflow:visible;border-radius:4px;}
 .frame .portfolio-back::-webkit-scrollbar-thumb {background:rgba(255, 255, 255, .6);}
 .frame .cover-bar {position:absolute;top:0;right:0;width:6px;height:100%;background:#000;-webkit-transition:all .5s;transition:all .5s;}
-.frame-box:hover .cover-bar, .frame-box:active .cover-bar {opacity:0;}
+.frame-box:hover .cover-bar {opacity:0;}
 
 @-webkit-keyframes background {
     0%, 100% {background-position:0% 13%}
